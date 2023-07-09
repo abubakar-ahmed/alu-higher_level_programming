@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 import random 
-number = ramdom.randint(-1000, 1000)
+number = ramdom.randint(-10000, 10000)
 digits = abs(number) % 10
 if number < 0:
     digit = -digit

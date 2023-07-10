@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-if __name__ == "__main__":
+if _name_ == "_main_":
     """Print the addition of all arguments."""
     import sys
 

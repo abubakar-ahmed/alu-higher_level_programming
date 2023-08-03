@@ -1,3 +1,5 @@
--- lists all cities contained in the database hbtn_0d_usa
--- lists all rows of a particular column in a database
-SELECT cities.id, cities.name, states.name FROM cities LEFT JOIN states ON states.id = cities.state_id ORDER BY cities.id;
+-- get the games genre by id 
+SELECT s.title, g.genre_id
+FROM tv_shows s, tv_show_genres g
+WHERE g.show_id = s.id
+ORDER BY s.title ASC, g.genre_id ASC;

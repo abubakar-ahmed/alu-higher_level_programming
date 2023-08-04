@@ -1,16 +1,20 @@
 #!/usr/bin/python3
-"""take a url and display the values"""
-
-
+"""
+takes in a URL, sends a request to the URL and displays the
+body of the response using requests
+"""
 import requests
-import sys
+from sys import argv
 
 
 if __name__ == "__main__":
-    """send the email"""
-    url = sys.argv[1]
-    response = requests.get(url)
-    if response.status_code <= 400:
-        print("{}".format(response.text))
+    """
+    takes in a URL, sends a request to the URL and displays the
+    body of the response using requests
+    """
+    url = argv[1]
+    r = requests.get(url)
+    if r.status_code >= 400:
+        print("Error code: {}".format(r.status_code))
     else:
-        print("Error code: {}".format(response.status_code))
+        print(r.text)

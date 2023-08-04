@@ -1,17 +1,18 @@
 #!/usr/bin/python3
-"""I documented you"""
-
-import urllib.request
-import urllib.parse
+"""Sends a POST request to a given URL with a given email.
+Usage: ./2-post_email.py <URL> <email>
+  - Displays the body of the response.
+"""
 import sys
+import urllib.parse
+import urllib.request
 
-if __name__ == '__main__':
-    """"Documented"""
+
+if __name__ == "__main__":
     url = sys.argv[1]
-    message = {"email": sys.argv[2]}
-    data = urllib.parse.urlencode(message)
-    data = data.encode('ascii')
-    req = urllib.request.Request(url, data)
-    with urllib.request.urlopen(req) as response:
-        content = response.read()
-        print("{}".format(content.decode("utf-8")))
+    value = {"email": sys.argv[2]}
+    data = urllib.parse.urlencode(value).encode("ascii")
+
+    request = urllib.request.Request(url, data)
+    with urllib.request.urlopen(request) as response:
+        print(response.read().decode("utf-8"))

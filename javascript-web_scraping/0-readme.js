@@ -5,8 +5,7 @@ const readAndPrintFile = (filePath) => {
   fs.readFile(filePath, 'utf-8', (err, data) => {
     if (err) {
       console.log(`An error occurred: ${err.message}`);
-    } 
-    else {
+  } else {
       console.log(data);
     }
   });
@@ -14,8 +13,7 @@ const readAndPrintFile = (filePath) => {
 
 if (process.argv.length !== 3) {
   console.log('Usage: node readFile.js <file_path>');
-} 
-else {
+} else {
   const filePath = process.argv[2];
   readAndPrintFile(filePath);
 }

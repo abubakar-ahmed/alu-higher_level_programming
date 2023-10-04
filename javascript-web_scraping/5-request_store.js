@@ -13,8 +13,8 @@ request.get(url, (err, res) => {
   } else {
     fs.writeFile(filePath, res.body, 'utf-8', (err) => {
       if (err) {
-    console.log(err);
+        console.log(err);
       }
     });
-  } 
+  }
 });

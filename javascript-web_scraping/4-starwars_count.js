@@ -3,6 +3,8 @@
 const request = require('request');
 
 const url = process.argv[2];
+let count = 0;
+let data;
 
 request.get(url, (err, res) => {
   if (err) {
@@ -13,7 +15,7 @@ request.get(url, (err, res) => {
       obj.characters.forEach((character) => {
         if (character.includes('/18/')) count++;
       });
-    });
+   });
   }
    console.log(count);
 });

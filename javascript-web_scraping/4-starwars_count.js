@@ -15,7 +15,7 @@ request.get(url, (err, res) => {
       obj.characters.forEach((character) => {
         if (character.includes('/18/')) count++;
       });
-   });
+    });
   }
-   console.log(count);
+  console.log(count);
 });
